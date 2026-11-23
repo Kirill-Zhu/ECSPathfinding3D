@@ -1,0 +1,12 @@
+{
+  "name": "com.kizhugames.ecspathfinding3d",
+  "version": "1.0.0",
+  "displayName": "ECSPathfinding3D",
+  "description": "This is a package for ECS 6.4.0 (Unity 6.4).\nIt is a Flow Field system based on Dijkstra's algorithm. It takes the entire terrain into account as well as crowd congestion around the destination point by increasing cell traversal costs. Recalculation occurs every 0.3 seconds.\n\nHow to use:\n1. In your MonoBehaviour scene, add the floor and walls, and assign them to the Obstacle layer.\n2. Add duplicates of these objects to the SubScene so that physics works properly within the ECS world (the field baking is based on these objects).\n3. In the FlowFieldAuthoring script, select this layer and specify the recalculation grid size for the Flow Field.\n4. Set the Transform position of the FlowFieldAuthoring object to (-0.5, -0.5, -0.5) (since the voxel size is Vector3.one, their centers need to be offset within the grid).\n5. The FlowFieldDestinationSetter works with both mouse clicks and touchpads/touchscreens.\n6. There is also a convenient FlowFieldDebugVisualizer that displays the path direction of each voxel on the grid.",
+  "unity": "6000.4",
+  "dependencies": {
+    "com.unity.entities": "6.4.0",
+    "com.unity.entities.graphics": "6.4.0",
+    "com.unity.physics": "1.4.7"
+  }
+}
